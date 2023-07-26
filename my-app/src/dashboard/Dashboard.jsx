@@ -14,14 +14,14 @@ const Dashboard = () => {
             label: 'Price',
             data: [2, 3, 4,4],
             backgroundColor: [
-              '#b6d7a8',
-              '#ef968f',
+              '#b5e745',
+              '#ffd966',
               '#c74c43',
               '#5cc8d7',
             ],
             borderColor: [
-              '#b6d7a8',
-              '#ef968f',
+              '#b5e745',
+              '#ffd966',
               '#c74c43',
               '#5cc8d7',
           
@@ -41,10 +41,10 @@ const Dashboard = () => {
     <Cards icon={jar} title ="Savings" value="$ 98,000"/>
 
     </div>
-    <div className="flex flex-wrap justify-evenly">
+    <div className="flex flex-wrap justify-evenly mt-20">
 
     
-<div className="w-[50%]">
+<div className="w-[50%] min-w-[350px]">
         <DataTable/>
 </div>
 

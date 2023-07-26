@@ -6,6 +6,15 @@ const DataTable = () => {
     { expense: 'Apple MacBook Pro 17"', category: 'Laptop', date: '2023-07-26', cost: 2999 },
     { expense: 'Microsoft Surface Pro', category: 'Laptop PC', date: '2023-07-25', cost: 1999 },
     { expense: 'Magic Mouse 2', category: 'Accessories', date: '2023-07-24', cost: 99 },
+    { expense: 'Apple MacBook Pro 17"', category: 'Laptop', date: '2023-07-26', cost: 2999 },
+    { expense: 'Microsoft Surface Pro', category: 'Laptop PC', date: '2023-07-25', cost: 1999 },
+    { expense: 'Magic Mouse 2', category: 'Accessories', date: '2023-07-24', cost: 99 },
+    { expense: 'Apple MacBook Pro 17"', category: 'Laptop', date: '2023-07-26', cost: 2999 },
+    { expense: 'Microsoft Surface Pro', category: 'Laptop PC', date: '2023-07-25', cost: 1999 },
+    { expense: 'Magic Mouse 2', category: 'Accessories', date: '2023-07-24', cost: 99 },
+    { expense: 'Apple MacBook Pro 17"', category: 'Laptop', date: '2023-07-26', cost: 2999 },
+    { expense: 'Microsoft Surface Pro', category: 'Laptop PC', date: '2023-07-25', cost: 1999 },
+    { expense: 'Magic Mouse 2', category: 'Accessories', date: '2023-07-24', cost: 99 },
   ]);
 
   // State to keep track of the sort order for Price and Date
