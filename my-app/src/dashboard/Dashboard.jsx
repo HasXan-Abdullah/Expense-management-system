@@ -6,7 +6,20 @@ import jar from '../assets/icons/jar.png';
 import loan from '../assets/icons/personal.png';
 import DataTable from "../components/DataTable";
 import DataChart from "../components/DataChart";
+
+import { Button, Input, Modal } from 'antd';
+import { useState } from 'react';
 const Dashboard = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
     const data = {
         labels: [ 'Salary',  'Expenses', 'Loan','Savings'],
         datasets: [
@@ -33,6 +46,18 @@ const Dashboard = () => {
   return (
     <div><Navbar/>
     
+    <div>
+    <Button className="ml-[4%] mb-3" onClick={showModal}>
+        Add Salary
+      </Button>
+      <Modal title="Add Current Salary"  footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+      <Input type="number" className="p-2 mb-3"/>
+      <div className=" flex">
+      <Button>Submit</Button>
+      </div>
+     
+      </Modal>
+    </div>
    
     <div className="flex-wrap flex justify-evenly w-auto ">
     <Cards icon={salary} title ="Salary" value="$ 98,000"/>
