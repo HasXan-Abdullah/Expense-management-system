@@ -33,7 +33,19 @@ const Dashboard = () => {
   return (
     <div><Navbar/>
     
-   
+    <div className="mt-5  mb-8 text-center text-4xl text-blue-500">
+      July
+      
+ 
+<select id="Month" className="">
+  <option selected>Choose a country</option>
+  <option value="US">United States</option>
+  <option value="CA">Canada</option>
+  <option value="FR">France</option>
+  <option value="DE">Germany</option>
+</select>
+
+    </div>
     <div className="flex-wrap flex justify-evenly w-auto ">
     <Cards icon={salary} title ="Salary" value="$ 98,000"/>
     <Cards icon={expense} title ="Expenses" value="$ 98,000"/>
@@ -41,6 +53,7 @@ const Dashboard = () => {
     <Cards icon={jar} title ="Savings" value="$ 98,000"/>
 
     </div>
+  
     <div className="flex flex-wrap justify-evenly mt-20">
 
     

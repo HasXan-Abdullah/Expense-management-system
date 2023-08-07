@@ -48,9 +48,10 @@ const DataTable = () => {
   };
 
   return (
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table className="w-full text-sm text-left text-gray-500">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+<div className="relative overflow-scroll h-3/4  no-scrollbar shadow-md sm:rounded-lg" >
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm text-left text-gray-500">
+        <thead className="text-xs text-gray-700  uppercase bg-gray-50">
           <tr>
             <th scope="col" className="px-6 py-3">
               SR No
@@ -73,7 +74,7 @@ const DataTable = () => {
             </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody >
           {data.map((item, index) => (
             <tr key={index} className="bg-white border-b">
               <td className="px-6 py-4">{index + 1}</td>
@@ -100,6 +101,7 @@ const DataTable = () => {
         </tbody>
       </table>
     </div>
+     </div>
   );
 };
 
