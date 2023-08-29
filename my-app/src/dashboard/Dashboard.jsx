@@ -6,7 +6,20 @@ import jar from '../assets/icons/jar.png';
 import loan from '../assets/icons/personal.png';
 import DataTable from "../components/DataTable";
 import DataChart from "../components/DataChart";
+
+import { Button, Input, Modal } from 'antd';
+import { useState } from 'react';
 const Dashboard = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
     const data = {
         labels: [ 'Salary',  'Expenses', 'Loan','Savings'],
         datasets: [
@@ -33,19 +46,7 @@ const Dashboard = () => {
   return (
     <div><Navbar/>
     
-    <div className="mt-5  mb-8 text-center text-4xl text-blue-500">
-      July
-      
- 
-<select id="Month" className="">
-  <option selected>Choose a country</option>
-  <option value="US">United States</option>
-  <option value="CA">Canada</option>
-  <option value="FR">France</option>
-  <option value="DE">Germany</option>
-</select>
-
-    </div>
+   
     <div className="flex-wrap flex justify-evenly w-auto ">
     <Cards icon={salary} title ="Salary" value="$ 98,000"/>
     <Cards icon={expense} title ="Expenses" value="$ 98,000"/>
