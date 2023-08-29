@@ -1,6 +1,11 @@
  import {   useNavigate } from "react-router-dom";
  
 const Navbar = () => {
+    let user = window.localStorage.getItem('user');
+    user =JSON.parse(user)
+    console.log(user)
+    user = user.user
+    
     const currentDate = new Date();
     const formattedDate = currentDate.toLocaleDateString('en-US', {
         weekday: 'short',
@@ -10,10 +15,13 @@ const Navbar = () => {
       });
  
     const navigate =useNavigate();
-
-    const handleSubmit =()=>{
+ 
+    const logout = ()=>{
+    
+        window.localStorage.removeItem("user")
         navigate('/login')
-    }
+    };
+  
   return (
  <nav className="navbar">
     <div className="flex justify-between m-3 p-2">
@@ -22,11 +30,11 @@ const Navbar = () => {
         </div>
         <div className="flex gap-6">
             <p className="text-end text-gray-500">
-                Welcome, <span className="font-semibold text-black">Hassan A.</span>
+                Welcome, <span className="font-semibold text-black">{user.name}</span>
                 <br></br>
                 <span className="text-[14px] font-semibold">{formattedDate}</span>
             </p>
-            <button onClick={handleSubmit} className="p-2 text-white text-xl text-center font-bold    bg-black  rounded-md">Logout
+            <button onClick={logout} className="p-2 text-white text-xl text-center font-bold    bg-black  rounded-md">Logout
            </button>
         </div>
     </div>

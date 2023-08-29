@@ -46,6 +46,18 @@ const Dashboard = () => {
   return (
     <div><Navbar/>
     
+    <div>
+    <Button className="ml-[4%] mb-3" onClick={showModal}>
+        Add Salary
+      </Button>
+      <Modal title="Add Current Salary"  footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+      <Input type="number" className="p-2 mb-3"/>
+      <div className=" flex">
+      <Button>Submit</Button>
+      </div>
+     
+      </Modal>
+    </div>
    
     <div className="flex-wrap flex justify-evenly w-auto ">
     <Cards icon={salary} title ="Salary" value="$ 98,000"/>
@@ -54,7 +66,6 @@ const Dashboard = () => {
     <Cards icon={jar} title ="Savings" value="$ 98,000"/>
 
     </div>
-  
     <div className="flex flex-wrap justify-evenly mt-20">
 
     
